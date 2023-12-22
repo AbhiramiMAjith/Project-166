@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>AR Circuit</title>
+
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="https://raw.githack.com/whitehatjr/ar-gesture-handler/main/index.js"></script>
+
+</head>
+<body style="margin:0px; overflow:hidden">
+    <a-scene embedded arjs="sourceType:webcam; debugUIEnabled:false; trackingMethod:best" vr-mode-ui = "enabled:false">
+        <a-assets>
+            <a-asset-item id="bulb" src="assets/bulb/scene.gltf"></a-asset-item>
+            <a-asset-item id="battery" src="assets/battery/scene.gltf"></a-asset-item>
+            <a-asset-item id="switch_on" src="assets/switch_on/scene.gltf"></a-asset-item>
+            <a-asset-item id="switch_off" src="assets/switch_off/scene.gltf"></a-asset-item>
+            <a-asset-item id="arrow" src="assets/arrow/scene.gltf"></a-asset-item>
+        </a-assets>
+        <a-marker preset="hiro">
+            <a-entity id="bulb_model" position="-0.1 0 0" gltf-model="#bulb"></a-entity>
+            <a-entity id="battery_model" position="-0.1 0 0" gltf-model="#battery"></a-entity>
+            <a-entity id="switch_on_model" position="-0.1 0 0" gltf-model="#switch_on"></a-entity>
+            <a-entity id="arrow_model" position="-0.1 0 0" gltf-model="#arrow"></a-entity>
+        </a-marker>
+        <a-marker preset="hiro">
+            <a-entity id="bulb_model" position="-0.1 0 0" gltf-model="#bulb"></a-entity>
+            <a-entity id="battery_model" position="-0.1 0 0" gltf-model="#battery"></a-entity>
+            <a-entity id="switch_off_model" position="-0.1 0 0" gltf-model="#switch_off"></a-entity>
+            <a-entity id="arrow_model" position="-0.1 0 0" gltf-model="#arrow"></a-entity>
+        </a-marker>
+    </a-scene>
+</body>
